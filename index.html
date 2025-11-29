@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyper Premium Download Portal</title>
+
+  <!-- Fonts & Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+    body {
+      background: linear-gradient(-45deg, #ff00cc, #333399, #00d2ff, #3a7bd5);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Particles */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Wrapper */
+    .wrapper {
+      width: 100%;
+      max-width: 980px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(25px);
+      border-radius: 25px;
+      padding: 45px;
+      border: 2px solid rgba(255,255,255,0.4);
+      box-shadow: 0 0 40px rgba(0,0,0,0.45), 0 0 20px #ffffff80 inset;
+      position: relative;
+      z-index: 5;
+      animation: fadeIn 1.3s ease;
+    }
+
+    /* Neon Border Animation */
+    .wrapper::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #ff00ff, #00e5ff, #ff00ff);
+      background-size: 300% 300%;
+      animation: neon 5s linear infinite;
+      z-index: -1;
+      filter: blur(10px);
+    }
+
+    @keyframes neon {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      color: #fff;
+      text-shadow: 0 0 25px rgba(255,255,255,1);
+      margin-bottom: 10px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { text-shadow: 0 0 20px #fff; }
+      50% { text-shadow: 0 0 40px #fff; }
+    }
+
+    /* Profile */
+    .profile { text-align: center; margin: 30px 0; }
+    .profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      box-shadow: 0 0 35px rgba(255,255,255,0.9);
+      animation: bounceIn 1.4s;
+    }
+    .profile h3 { color: #fff; font-size: 26px; margin-top: 15px; }
+
+    /* Cards */
+    .card {
+      padding: 30px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+    }
+
+    .desc {
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    .download-btn {
+      display: block;
+      margin-left: 200px;
+      margin-right: 200px;
+      padding: 18px 50px;
+      background: linear-gradient(135deg, #ffefba, #ffffff);
+      border-radius: 18px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: 0 0 35px rgba(255,255,255,0.9);
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 50px #fff;
+    }
+
+    /* Social Icons */
+    .social {
+      margin-top: 35px;
+      text-align: center;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .social a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social a:hover { transform: scale(1.2); background: #fff; color: #000; }
+
+    /* Footer */
+    footer {
+      margin-top: 35px;
+      text-align: center;
+      color: #fff;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+  @media (max-width: 768px) {
+  h1 { font-size: 34px; }
+  .profile img { width: 120px; height: 120px; }
+  .profile h3 { font-size: 20px; }
+  .desc { font-size: 18px; padding: 0 10px; }
+  .download-btn { padding: 15px 35px; font-size: 20px; }
+  .wrapper { padding: 30px; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+  .profile img { width: 100px; height: 100px; }
+  .profile h3 { font-size: 18px; }
+  .desc { font-size: 16px; }
+  .download-btn { padding: 12px 25px; font-size: 18px; }
+  .wrapper { padding: 22px; border-radius: 18px; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 90 },
+      size: { value: 3 },
+      color: { value: "#ffffff" },
+      line_linked: { enable: true, color: "#ffffff" },
+      move: { speed: 2 }
+    }
+  });
+</script>
+
+<div class="wrapper" data-tilt data-tilt-max="10" data-tilt-speed="400">
+  <h1>🔥 Project Download Page 🔥</h1>
+
+  <div class="profile">
+    <img src="developer.png" alt="Developer Photo" />
+    <h3>Developed by: Sachin </h3>
+  </div>
+
+  <div class="card animate__animated animate__zoomIn">
+    <p class="desc">
+    Here you can download your project. Just click the download button below to get your project ZIP file instantly.
+    </p>
+
+    <a href="MonikaProject.zip" class="download-btn" download>⬇ Download Project ⬇</a>
+  </div>
+
+  
+
+  <footer>© 2025 Your Name — All Rights Reserved</footer>
+</div>
+
+</body>
+</html>
