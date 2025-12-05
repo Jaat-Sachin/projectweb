@@ -2,22 +2,6 @@
 <html lang="en">
 
 <head>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1542556326707162"
-     crossorigin="anonymous"></script>
-
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-30BG00HF92"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-30BG00HF92');
-</script>
-
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sachin | Developer Portfolio</title>
@@ -293,23 +277,134 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      .container {
-        padding: 60px 20px;
-      }
 
-      h1 {
-        font-size: 2.5rem;
-      }
+@media (max-width: 1024px) {
+  .container {
+    padding: 60px 20px;
+  }
 
-      .grid {
-        grid-template-columns: 1fr;
-      }
+  h1 {
+    font-size: 3rem;
+  }
 
-      .project-item {
-        padding: 24px;
-      }
-    }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .avatar-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    padding: 40px 16px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .avatar-wrapper {
+    width: 110px;
+    height: 110px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-item {
+    padding: 22px;
+  }
+
+  .project-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-item p {
+    font-size: 0.95rem;
+  }
+
+  .social-dock {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .social-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+  .avatar-wrapper {
+    width: 95px;
+    height: 95px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .project-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .download-tag {
+    font-size: 0.85rem;
+  }
+
+  /* Buttons (Print & First Page) stack on small phones */
+  .header a {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+  }
+}
+
   </style>
 </head>
 
@@ -332,16 +427,18 @@
 
       <!-- Print Section Button -->
       <div style="margin-top: 24px;">
-        <a href="next.html"  target="_blank"
+        <a href="next.html" target="_blank"
           style="display: inline-block; padding: 12px 24px; background: var(--accent); color: white; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);">
           Print Section <i data-lucide="printer"
             style="width: 16px; height: 16px; vertical-align: middle; margin-left: 6px;"></i>
-        </a>
-        <a href="FirstPage.png" target="_blank" download
-          style="display: inline-block; padding: 12px 24px; background: var(--accent); color: white; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); margin-left: 15px;">
-          First Page <i data-lucide="sticky-note"
+        </a>    
+      
+        <a href="FirstPage.png" target="_blank"
+          style="display: inline-block; padding: 12px 24px; background: var(--accent); color: white; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); margin-left: 10px; margin-top: 10px;">
+          First Page <i data-lucide="printer"
             style="width: 16px; height: 16px; vertical-align: middle; margin-left: 6px;"></i>
         </a>
+      </div>
     </header>
 
     <main class="grid">
@@ -358,7 +455,7 @@
 
       <a href="MonikaProject.zip" class="project-item" download>
         <div class="project-icon">
-          <i data-lucide="book-a"></i>
+          <i data-lucide="file-text"></i>
         </div>
         <h3>Monika Project</h3>
         <p>Click the button below to download the print file.</p>
@@ -369,7 +466,7 @@
 
       <a href="TusharProject.zip" class="project-item" download>
         <div class="project-icon">
-          <i data-lucide="book-alert"></i>
+          <i data-lucide="file-text"></i>
         </div>
         <h3>Tushar Project</h3>
         <p>Click the button below to download the print file.</p>
@@ -380,7 +477,7 @@
 
       <a href="BheemProject.zip" class="project-item" download>
         <div class="project-icon">
-          <i data-lucide="book-lock"></i>
+          <i data-lucide="file-text"></i>
         </div>
         <h3>Bheem Project</h3>
         <p>Click the button below to download the print file.</p>
@@ -433,9 +530,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
